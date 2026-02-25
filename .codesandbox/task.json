@@ -1,0 +1,14 @@
+{
+  "$schema": "https://codesandbox.io/schemas/tasks.json",
+  "setupTasks": "npm install",
+  "tasks": {
+    "dev": {
+      "name": "Start NestJS dev server",
+      "command": "npm run start:dev",
+      "runAtStart": true,
+      "preview": {
+        "port": 3000
+      }
+    }
+  }
+}
