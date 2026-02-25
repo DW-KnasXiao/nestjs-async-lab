@@ -19,8 +19,8 @@ Complete the `getDashboard(userId)` method. The mobile team is complaining about
 
 #### 1. Performance & Latency
 
-- **SLA Requirement:** The mobile team reports that the dashboard feels sluggish. The implementation must be optimized so that the total response time is governed by the slowest upstream dependency (~500ms under normal conditions), not the sum of all dependencies.
-- **Service Stability:** The `Recommendation Service` can occasionally take up to 3 seconds to respond. Ideally, the BFF should handle this to keep the user experience responsive.
+- **Standard SLA:** Under normal conditions, the total response time must be governed by the slowest upstream dependency (~500ms), not the sum of all dependencies.
+- **Resilience Goal:** The `Recommendation Service` occasionally experiences extreme latency (up to 3 seconds). The BFF should ensure that a response is delivered to the mobile app **within 1 second**, even if it means returning partial data (e.g., an empty recommendations list) to maintain responsiveness.
 
 #### 2. Fault Tolerance
 
